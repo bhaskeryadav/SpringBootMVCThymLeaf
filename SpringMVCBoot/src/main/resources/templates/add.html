@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Form</h1>
+	 <div th:replace="fragments/header :: header"/>
     <form action="#" th:action="@{/emp/addEmp}" th:object="${emp}" method="post">
     	<p>Id: <input type="text" th:field="*{id}" /></p>
         <p>Name: <input type="text" th:field="*{name}" /></p>

@@ -5,10 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Form</h1>
-    <form action="#" th:action="@{'/emp/getEmp/'${id}}"  >
-    	<p>Id: <input type="text" th:field="${id}" /></p>
-        <p><input type="submit" value="Submit" /></p>
-    </form>
+	<h1><p th:text="${head}" /></h1>
+    	<!-- <p>Id: <input type="text" th:field="${id}" /></p> -->
+    	 <td th:text="${id}">1</td>
+        <a  th:href="@{/emp/getEmp/'${id}}"><span>Search</span></a>
 </body>
 </html>

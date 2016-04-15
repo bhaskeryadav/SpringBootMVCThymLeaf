@@ -1,36 +1,19 @@
 package com.example.pojo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.example.pojo.validation.annotation.IsValidEmp;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class Emp {
 
+	//@IsValidEmp
 	private String name;
 	
 	private Integer id;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Emp(String name, Integer id) {
-		super();
-		this.name = name;
-		this.id = id;
-	}
-	
-	public Emp(){
-		
-	}
-	
 	
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>List</title>
+</head>
+<body>
+ <div th:replace="fragments/header :: header"/>
+	<form action="#" th:action="@{/login/register}" th:object="${logBean}"
+		method="post">
+
+		<table>
+			<tbody>
+				<tr>
+					<td>Id :</td>
+					<td><input type="text" th:field="*{id}" /></td>
+				</tr>
+				<tr>
+					<td>User Name :</td>
+					<td><input type="text" th:field="*{userName}" /></td>
+				</tr>
+				<tr>
+					<td>Password :</td>
+					<td><input type="text" th:field="*{password}" /></td>
+				</tr>
+				<tr>
+					<td>Date :</td>
+					<td><input type="date" th:field="*{date}" /></td>
+				</tr>
+				<tr>
+					<td>Enter Marks:</td>
+					<td><input type="text" th:field="*{grade}" /></td>
+				</tr>
+				<tr>
+					<td>Choose quantity :</td>
+					<td><select id="list" th:field="*{myList}" size="5"
+						multiple="multiple">
+							<option th:each="data : ${serList}" th:value="${{data}}"
+								th:text="${data}"></option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><input type="submit" /></td>
+					<td><input type="reset" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+</body>
+</html>

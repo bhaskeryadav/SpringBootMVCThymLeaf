@@ -1,7 +1,6 @@
 package com.example.services;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -14,7 +13,6 @@ public class EmpServices {
 	List<Emp> li=new ArrayList<>();
 	
 	public List<Emp> getList(){
-
 		return li;
 	}
 
@@ -23,12 +21,6 @@ public class EmpServices {
 	}
 
 	public Emp getEmp(Integer id) {
-		for (Iterator iterator = li.iterator(); iterator.hasNext();) {
-			Emp type = (Emp) iterator.next();
-			if(type.getId().equals(id)){
-				return type;
-			}
-		}
-		return null;
+		return li.stream().filter(e->e.getId().equals(id)).findFirst().orElse(null);
 	}
 }
