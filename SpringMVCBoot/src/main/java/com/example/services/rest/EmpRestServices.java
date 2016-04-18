@@ -10,6 +10,10 @@ import com.example.pojo.Emp;
 @RestController
 public class EmpRestServices {
 
+	/*
+	 * produces can be used for declaring the return type of data instead of 
+	 * contentnegotiation 
+	 */
 	@RequestMapping(value="/emp1",produces={MediaType.APPLICATION_JSON_VALUE},method=RequestMethod.GET)
 	public Emp getEmpJson(){
 		Emp e=new Emp();

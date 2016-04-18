@@ -34,7 +34,11 @@ public class SpringMvcBootApplication  extends WebMvcConfigurerAdapter{
 		return rbs;
 	}
 	
-	@Bean
+	/*
+	 * this method uses contentnavigationviewresolver to return data in formats like pdf,json etc,
+	 * instead we can use rest services with produces tag containing the value of returned object
+	 */
+/*	@Bean
 	public ViewResolver contentResolver(ContentNegotiationManager cnm) {
 		ContentNegotiatingViewResolver cnvr = new ContentNegotiatingViewResolver();
 		cnvr.setContentNegotiationManager(cnm);
@@ -44,7 +48,7 @@ public class SpringMvcBootApplication  extends WebMvcConfigurerAdapter{
 		vr.add(thymleafViewResolver());
 		cnvr.setViewResolvers(vr);
 		return cnvr;
-	}
+	}*/
 
 	@Bean
 	public TemplateResolver thymleafTemplateResolver() {

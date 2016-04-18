@@ -24,6 +24,9 @@ public class EmployeController {
 	@Autowired
 	private EmpServices empSer;
 	
+	/*
+	 * Use this object to get bean by name for a specific method
+	 */
 	@Autowired
 	private ApplicationContext cont;
 
@@ -47,6 +50,9 @@ public class EmployeController {
 		return "success";
 	}
 	
+	/*
+	 * Figure out how to send path variable from thymeleaf
+	 */
 	@RequestMapping("/getEmp/{id}")
 	public ModelAndView getEmp(@PathVariable Integer id){
 		ModelAndView mv=new ModelAndView("success");
